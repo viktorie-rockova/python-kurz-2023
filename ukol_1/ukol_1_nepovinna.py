@@ -15,7 +15,7 @@ print(rozdelene_jmeno[0].capitalize() + ' ' + rozdelene_jmeno[1].capitalize())
 #inicialy
 print(rozdelene_jmeno[0][0:1].upper() + '. ' + rozdelene_jmeno[1][0:1].upper() + '.')
 
-#křestní jméno zkrácené na první písmeno a příjmení, pokud je křestní jméno delší než 5 znaků. Jinak vypíše standardní variantu, tj. první písmeno velké, další malá (u vstupu Jarmila Malá by došlo ke zkrácení křestního jména, zatímco u vstupu Jana Malá nikoliv)
+#křestní jméno zkrácené na první písmeno a příjmení, pokud je křestní jméno delší než 5 znaků. Jinak vypíše standardní variantu, tj. první písmeno velké, další malá.
 if len(rozdelene_jmeno[0]) > 5:
   print(rozdelene_jmeno[0][0:1].upper() + '. ' + rozdelene_jmeno[1].capitalize())
 else:
