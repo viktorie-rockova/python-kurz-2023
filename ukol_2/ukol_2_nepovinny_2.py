@@ -1,16 +1,3 @@
-# Ve slovníku zde najdeš seznam slovníků s informacemi o státech světa. O každém státu tam vidíš následující informace:
-
-# název státu (name),
-# hlavní město (capital),
-# region (region),
-# subregion (subregion),
-# populace (population),
-# rozloha (area),
-# Giniho koeficient (gini).
-# Vytvoř program, který se uživatele zeptá na region, který ho zajímá. Následně projdi seznam a vypiš všechny státy, které leží v regionu. Pokud program žádný stát pro daný region nenajde, vypiš text "Neznámý region".
-
-# V tomto bonusu využiješ znalosti z bonusové kapitoly Slovníky a cykly: dvourozměrné tabulky v Pythonu
-
 staty = [
     {
         "name": "Afghanistan",
@@ -2156,3 +2143,29 @@ staty = [
         "area": 390757.0,
     },
 ]
+
+# Ve slovníku zde najdeš seznam slovníků s informacemi o státech světa. O každém státu tam vidíš následující informace:
+
+# název státu (name),
+# hlavní město (capital),
+# region (region),
+# subregion (subregion),
+# populace (population),
+# rozloha (area),
+# Giniho koeficient (gini).
+# Vytvoř program, který se uživatele zeptá na region, který ho zajímá. Následně projdi seznam a vypiš všechny státy, které leží v regionu. Pokud program žádný stát pro daný region nenajde, vypiš text "Neznámý region".
+
+# V tomto bonusu využiješ znalosti z bonusové kapitoly Slovníky a cykly: dvourozměrné tabulky v Pythonu
+
+regionzajmu = input("Zadejte region, ktery vas zajima: ")
+
+statyzajmu = []
+
+for stat in staty:
+  if stat["region"] == regionzajmu:
+    statyzajmu.append(stat["name"])
+
+if len(statyzajmu) == 0:
+  print("Neznamy region.")
+else: 
+  print(statyzajmu)

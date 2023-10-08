@@ -52,3 +52,26 @@ morse_code = {
     "(": "-.--.",
     ")": "-.--.-",
 }
+
+morse_code[" "] = "/"
+
+textkprekladu = input("Zadejte text pro preklad do morseovy abecedy:")
+
+morse = []
+
+isValid = ()
+
+for letter in textkprekladu:
+  letter = letter.lower()
+  isValid = False
+  for key, value in morse_code.items():
+    if letter == key:
+      morse.append(value)
+      isValid = True
+  if isValid == False:
+    print("Neplatne zadani.")
+    break
+
+if isValid == True:
+  for character in morse:
+    print(character, end=" ")
