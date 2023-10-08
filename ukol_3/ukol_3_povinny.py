@@ -1,11 +1,11 @@
 import json
 
-with open("znamky.json", mode="r", encoding="utf-8") as soubor:
-  znamky = json.load(soubor)
+with open("body.json", mode="r", encoding="utf-8") as soubor:
+  body = json.load(soubor)
 
 prospech = {}
 
-for key, value in znamky.items():
+for key, value in body.items():
   mark = "Fail"
   if value >= 60:
     mark = "Pass"
