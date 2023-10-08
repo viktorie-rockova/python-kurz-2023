@@ -15,10 +15,11 @@ if (kodsoucastkyzakaznik) in sklad:
   if sklad[kodsoucastkyzakaznik] < pocetkusuzakaznik:
     print(f"Nemame dostatecny pocet kusu na sklade. Lze prodat pouze {sklad [kodsoucastkyzakaznik]}.")
     sklad.pop(kodsoucastkyzakaznik)
+    print(f"Stav skladu je: {sklad}")
   else:
     print("Mame na sklade dostatek kusu.")
     sklad[kodsoucastkyzakaznik] -= pocetkusuzakaznik
+    print(f"Stav skladu je: {sklad}")
 else:
   print("Polozka neni na sklade.")
-
-print(sklad)
+  print(f"Stav skladu je: {sklad}")
