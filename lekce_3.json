@@ -1,0 +1,11 @@
+{
+  "nazev": "hawaii",
+  "cena": "250",
+  "dostupnost": true,
+  "ingredience": [
+    "testo",
+    "ananas",
+    "smetana",
+    "sunka"
+  ]
+}
