@@ -55,13 +55,13 @@ morse_code = {
 
 morse_code[" "] = "/"
 
-textkprekladu = input("Zadejte text pro preklad do morseovy abecedy:")
+text_k_prekladu = input("Zadejte text pro preklad do morseovy abecedy:")
 
 morse = []
 
 isValid = ()
 
-for letter in textkprekladu:
+for letter in text_k_prekladu:
   letter = letter.lower()
   isValid = False
   for key, value in morse_code.items():

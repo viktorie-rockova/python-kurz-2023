@@ -2157,15 +2157,15 @@ staty = [
 
 # V tomto bonusu využiješ znalosti z bonusové kapitoly Slovníky a cykly: dvourozměrné tabulky v Pythonu
 
-regionzajmu = input("Zadejte region, ktery vas zajima: ")
+region_zajmu = input("Zadejte region, ktery vas zajima: ")
 
-statyzajmu = []
+staty_zajmu = []
 
 for stat in staty:
-  if stat["region"] == regionzajmu:
-    statyzajmu.append(stat["name"])
+  if stat["region"] == region_zajmu:
+    staty_zajmu.append(stat["name"])
 
-if len(statyzajmu) == 0:
+if len(staty_zajmu) == 0:
   print("Neznamy region.")
 else: 
-  print(statyzajmu)
+  print(staty_zajmu)
