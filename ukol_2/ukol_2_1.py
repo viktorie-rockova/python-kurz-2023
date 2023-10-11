@@ -7,18 +7,17 @@ sklad = {
   "BC547C": 10
 }
 
-kodsoucastkyzakaznik = input("Zadej kod soucastky:")
+kod_soucastky_zakaznik = input("Zadej kod soucastky:")
 
-pocetkusuzakaznik = int(input("Zadej pocet kusu:"))
-
-if (kodsoucastkyzakaznik) in sklad:
-  if sklad[kodsoucastkyzakaznik] < pocetkusuzakaznik:
-    print(f"Nemame dostatecny pocet kusu na sklade. Lze prodat pouze {sklad [kodsoucastkyzakaznik]}.")
-    sklad.pop(kodsoucastkyzakaznik)
+if (kod_soucastky_zakaznik) in sklad:
+  pocet_kusu_zakaznik = int(input("Zadej pocet kusu:"))
+  if sklad[kod_soucastky_zakaznik] < pocet_kusu_zakaznik:
+    print(f"Nemame dostatecny pocet kusu na sklade. Lze prodat pouze {sklad [kod_soucastky_zakaznik]}.")
+    sklad.pop(kod_soucastky_zakaznik)
     print(f"Stav skladu je: {sklad}")
   else:
     print("Mame na sklade dostatek kusu.")
-    sklad[kodsoucastkyzakaznik] -= pocetkusuzakaznik
+    sklad[kod_soucastky_zakaznik] -= pocet_kusu_zakaznik
     print(f"Stav skladu je: {sklad}")
 else:
   print("Polozka neni na sklade.")
