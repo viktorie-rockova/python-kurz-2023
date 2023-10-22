@@ -5,7 +5,8 @@
 # def mult(cislo1, cislo2):
 #   return cislo1 * cislo2
 
-# print(mult(2, 6))
+# vysledek = mult(5, 2)
+# print(f'5 * 2 = {vysledek}')
 
 
 # ------------------------------UKOL 2------------------------------
@@ -81,19 +82,31 @@
 # ********
 # Nápověda: 8 * '*' == '********'
 
-# Bonus: Znak, kterým se má text obalit, bude zadán také jako parametr.
-
-# Lukas comments:
-# a co ti na tvém řešení nehraje? akorát bych tam zauvažoval jak ta funkce vezme parametr než aby řešila input.. ?
-# a navíc to má být rámeček okolo celého slova, ještě dám hint, zkus si napsat slovo: nejkulataoulinkatejsikulicka
+# Bonus: Znak, kterým se má text obalit, bude zadán také jako parametr. 
 
 def ramecek(slovo):
-  print("********\n* " + slovo + " *\n********")
+  delka = len(slovo)
+  sirka_ramecku = delka + 4
+  print('*' * sirka_ramecku)
+  print(f'* {slovo} *')
+  print('*' * sirka_ramecku)
 
-ramecek(input("Zadej slovo: "))
+s = input('Zadej slovo: ')
+ramecek(s)
 
 #  ------------------------------UKOL 4------------------------------
 # Napiš funkci month_of_birth, která bude mít jeden parametr - rodné číslo. Funkce ze zadaného rodného čísla určí měsíc narození, které vrátí jako výstup.
 # Nezapomeň, že pro ženy je k měsíci připočtena hodnota 50.
 
 # Příklad: Pro hodnotu 9207054439 vrátí 7. Pro hodnotu 9555125899 vrátí 5.
+
+def month_of_birth(rodne_cislo):
+    cislo_mesice = int(str(rodne_cislo)[2:4])
+    if cislo_mesice <= 12:
+        return cislo_mesice
+    else:
+        return cislo_mesice - 50
+
+
+print(f'9207054439 -> {month_of_birth(9207054439)}')
+print(f'9555125899 -> {month_of_birth(9555125899)}')
