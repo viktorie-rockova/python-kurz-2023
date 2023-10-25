@@ -14,6 +14,7 @@
 # Pro kontrolu předvolby použijte slicing (viz první lekce) pro získání prvních 4 znaků řetězce. Ty porovnejte s řetězcem "+420".
 
 def overeni_formatu(telefonni_cislo):
+  telefonni_cislo = telefonni_cislo.replace(" ", "")
   if len(telefonni_cislo) == 9 or (len(telefonni_cislo) == 13 and telefonni_cislo[:4] == "+420"):
     return True
   else:
