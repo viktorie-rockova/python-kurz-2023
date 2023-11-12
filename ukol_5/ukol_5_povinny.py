@@ -24,9 +24,9 @@ seznam_rannich_teplot = [den[0] for den in teploty]
 print(seznam_rannich_teplot)
 
 # 3. Vytvoř seznam nočních teplot.
-seznam_vecernich_teplot = [den[2] for den in teploty]
+seznam_nocnich_teplot = [den[3] for den in teploty]
 
-print(seznam_vecernich_teplot)
+print(seznam_nocnich_teplot)
 
 # 4. Vytvoř seznam dvouprvkových seznamů obsahujících pouze polední a noční teplotu.
 seznam_polednich_a_nocnich_teplot = [[den[1],den[2]] for den in teploty]

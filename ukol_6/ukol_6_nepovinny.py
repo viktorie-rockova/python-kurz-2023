@@ -30,7 +30,7 @@ class Auto:
             cena_pronajmu = int(pocet_dni) * 400
         else:
             cena_pronajmu = int(pocet_dni) * 300
-        return f"Zákazník najel {najete_km} během {pocet_dni}. Cena pronájmu bude {cena_pronajmu} Kč."
+        return f"Zákazník najel {najete_km} km během {pocet_dni} dní. Cena pronájmu bude {cena_pronajmu} Kč."
         
 
 
@@ -49,21 +49,27 @@ while  pokracuj:
     
     elif vyber_funkce.lower() == "vratit":
         vyber_auta = input("Zadejte značku vraceného auta: ")
-        stav_tachometru = input("Zadejte stav tachometru: ")
-        pocet_dni = input("Zadejte počet dní zápůjčky: ")
-        
         if vyber_auta.lower() == "peugeot":
             if auto1.dostupnost == False:
-                print(auto1.vrat_auto(stav_tachometru, pocet_dni))
+                stav_tachometru = input("Zadejte stav tachometru: ")
+                if int(stav_tachometru) > auto1.pocet_najetych_km:
+                    pocet_dni = input("Zadejte počet dní zápůjčky: ")
+                    print(auto1.vrat_auto(stav_tachometru, pocet_dni))
+                else:
+                    print("Neplatné zadání stavu tachometru.")
             else:
                 print("Toto auto nebylo zapůjčeno.")
 
         elif vyber_auta.lower() == "škoda":
             if auto2.dostupnost == False:
-                print(auto2.vrat_auto(stav_tachometru, pocet_dni))
+                stav_tachometru = input("Zadejte stav tachometru: ")
+                if int(stav_tachometru) > auto2.pocet_najetych_km:
+                    pocet_dni = input("Zadejte počet dní zápůjčky: ")
+                    print(auto2.vrat_auto(stav_tachometru, pocet_dni))
+                else:
+                    print("Neplatné zadání stavu tachometru.")    
             else:
                 print("Toto auto nebylo zapůjčeno.")
-
         else:
             print("Neplatná volba značky vozidla.")
 
