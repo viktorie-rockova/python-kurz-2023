@@ -9,7 +9,7 @@
 # 21.4
 # 8./9
 
-\d{1,2}[\./] ?\d{1,2}[\./] ?\d{4}
+\d{1,2}[\.\/] ?\d{1,2}[\.\/] ?\d{4}
 
 # Zkopíruj si obsah souboru posta.txt do regex101 jako testovací řetězec. Vymysli regulární výraz,
 # který označí všechny "poslední řádky adresy" v textu. Poslední řádka adresy zpravidla obsahuje PSČ a 
